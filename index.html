@@ -3,129 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker World</title>
-    <style>
-        /* Reset Default Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: #000; /* Background hitam */
-            color: #00ff00; /* Warna teks hijau neon */
-            font-family: 'Courier New', Courier, monospace;
-            overflow: hidden;
-        }
-        h1, h2, p {
-            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-        }
-        header {
-            padding: 20px;
-            text-align: center;
-            background: #000;
-            border-bottom: 2px solid #00ff00;
-            animation: rgbGlow 3s infinite alternate;
-        }
-        header h1 {
-            font-size: 2.5rem;
-        }
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #00ff00;
-            margin: 0 15px;
-            font-size: 1.2rem;
-            transition: color 0.3s, text-shadow 0.3s;
-        }
-        nav a:hover {
-            color: #fff;
-            text-shadow: 0 0 10px #fff, 0 0 20px #00ff00;
-        }
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-            animation: fadeIn 2s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        .terminal {
-            background: #111;
-            border: 2px solid #00ff00;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00ff00;
-            animation: rgbGlow 3s infinite alternate;
-        }
-        .terminal p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            line-height: 1.5;
-            color: #0f0;
-        }
-        .anime {
-            display: block;
-            margin: 30px auto;
-            width: 250px;
-            animation: float 3s infinite ease-in-out;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-            border-top: 2px solid #00ff00;
-            background: #000;
-            animation: rgbGlow 3s infinite alternate;
-        }
-        footer p {
-            font-size: 0.9rem;
-        }
-        /* RGB Glowing Animation */
-        @keyframes rgbGlow {
-            0% { border-color: #ff0000; text-shadow: 0 0 5px #ff0000; }
-            33% { border-color: #00ff00; text-shadow: 0 0 5px #00ff00; }
-            66% { border-color: #0000ff; text-shadow: 0 0 5px #0000ff; }
-            100% { border-color: #ff00ff; text-shadow: 0 0 5px #ff00ff; }
-        }
-    </style>
+    <title>Welcome to My Hacker World</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Hacker World</h1>
+        <h1>Welcome to My Hacker World</h1>
         <nav>
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#repositories">Repositories</a>
+            <a href="https://github.com/mraihaan22" target="_blank">My GitHub</a>
         </nav>
     </header>
-    <section class="hero" id="home">
-        <h2>Welcome to the Dark Side!</h2>
+
+    <section id="home" class="hero">
+        <h2>Welcome to My Profile</h2>
+        <div class="profile-container">
+            <img src="https://avatars.githubusercontent.com/u/12345678?v=4" alt="Profile Picture" class="profile-img">
+            <p class="profile-text">
+                Hi, I'm <strong>Mraihaan22</strong>. Welcome to my hacker world! I am passionate about coding, hacking, and exploring the digital world.
+                You can find my work on GitHub.
+            </p>
+        </div>
         <div class="terminal">
             <p>&gt; Booting up...</p>
-            <p>&gt; Access Granted. Welcome, hacker!</p>
+            <p>&gt; Accessing profile...</p>
+            <p>&gt; Welcome to my world, hacker!</p>
         </div>
-        <!-- Anime GIF -->
-        <img src="https://i.imgur.com/3RyeNqi.gif" alt="Hacker Anime" class="anime">
     </section>
+
+    <section id="repositories">
+        <h2>My Repositories</h2>
+        <div class="repo-list" id="repo-list">
+            <!-- Repositories will be dynamically inserted here -->
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Hacker World. Stay anonymous.</p>
+        <p>&copy; 2024 Mraihaan22 - All Rights Reserved</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #111;
+    border-bottom: 2px solid #00ff00;
+    animation: rgbGlow 3s infinite alternate;
+}
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+nav a {
+    text-decoration: none;
+    color: #00ff00;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #00ff00;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px #00ff00;
+}
+.profile-text {
+    font-size: 1.2rem;
+    text-align: left;
+    max-width: 500px;
+}
+.terminal {
+    background: #111;
+    border: 2px solid #00ff00;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff00;
+    animation: rgbGlow 3s infinite alternate;
+}
+
+/* Repositories Section */
+#repositories {
+    padding: 40px 20px;
+    text-align: center;
+}
+.repo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.repo-item {
+    background: #222;
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff00;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.repo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ff00;
+}
+.repo-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+.repo-item p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+.repo-item a {
+    text-decoration: none;
+    color: #00ff00;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    border-top: 2px solid #00ff00;
+    animation: rgbGlow 3s infinite alternate;
+}
+
+/* Animation for RGB Glowing */
+@keyframes rgbGlow {
+    0% { border-color: #ff0000; text-shadow: 0 0 5px #ff0000; }
+    33% { border-color: #00ff00; text-shadow: 0 0 5px #00ff00; }
+    66% { border-color: #0000ff; text-shadow: 0 0 5px #0000ff; }
+    100% { border-color: #ff00ff; text-shadow: 0 0 5px #ff00ff; }
+}
+
+/* Fade-in Animation for Hero Section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
