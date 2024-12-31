@@ -3,63 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Sederhana</title>
+    <title>Website MRAIHAAN22</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Resetting default styles */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
         header {
-            background: #007bff;
-            color: #fff;
-            padding: 1rem 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffeb3b;
         }
         nav {
-            margin: 0 auto;
-            text-align: center;
-            background: #eee;
-            padding: 1rem 0;
+            margin-top: 15px;
         }
         nav a {
-            margin: 0 15px;
             text-decoration: none;
-            color: #007bff;
+            color: #fff;
+            margin: 0 15px;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            transition: background 0.3s, transform 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            background: #ffeb3b;
+            color: #333;
+            border-radius: 5px;
+            transform: scale(1.1);
         }
-        main {
-            padding: 2rem;
+        .hero {
             text-align: center;
+            padding: 100px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            margin: 20px;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .anime {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translate(-50%, 0);
+            }
+            50% {
+                transform: translate(-50%, -10px);
+            }
         }
         footer {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
             text-align: center;
+            padding: 20px;
             margin-top: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffeb3b;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+        }
+        footer p {
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Selamat Datang di Website Saya</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <main>
+    <section class="hero" id="home">
         <h2>Halo Dunia!</h2>
-        <p>Ini adalah contoh website sederhana yang dibuat dengan HTML dan CSS.</p>
-    </main>
+        <p>Website ini dirancang untuk menampilkan informasi dan karya dari MRAIHAAN22. Nikmati pengalaman Anda di sini!</p>
+        <!-- Anime GIF -->
+        <img src="https://i.imgur.com/your-anime-gif-url.gif" alt="Anime Elaina" class="anime" width="200">
+    </section>
     <footer>
-        <p>&copy; 2024 Website Saya. All rights reserved.</p>
+        <p>&copy; 2024 MRAIHAAN22. All rights reserved.</p>
     </footer>
 </body>
 </html>
