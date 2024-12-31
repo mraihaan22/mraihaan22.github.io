@@ -5,12 +5,21 @@
     box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Body and Background Animation */
 body {
-    background-color: #000;
+    background: #000;
     color: #00ff00;
     font-family: 'Courier New', Courier, monospace;
     overflow-x: hidden;
+    animation: bgAnimation 10s infinite linear;
+}
+
+@keyframes bgAnimation {
+    0% { background-color: #000; }
+    25% { background-color: #1a1a1a; }
+    50% { background-color: #333; }
+    75% { background-color: #1a1a1a; }
+    100% { background-color: #000; }
 }
 
 /* Header Styles */
@@ -48,6 +57,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    position: relative;
 }
 .profile-img {
     border-radius: 50%;
@@ -55,6 +65,10 @@ nav a:hover {
     height: 150px;
     margin-right: 20px;
     box-shadow: 0 0 10px #00ff00;
+    transition: transform 0.3s;
+}
+.profile-img:hover {
+    transform: scale(1.1);
 }
 .profile-text {
     font-size: 1.2rem;
@@ -87,7 +101,7 @@ nav a:hover {
     background: #222;
     margin: 10px;
     padding: 20px;
-    width: 250px;
+    width: 300px;
     border-radius: 10px;
     box-shadow: 0 0 10px #00ff00;
     text-align: center;
@@ -121,7 +135,7 @@ footer {
     animation: rgbGlow 3s infinite alternate;
 }
 
-/* Animation for RGB Glowing */
+/* Animations */
 @keyframes rgbGlow {
     0% { border-color: #ff0000; text-shadow: 0 0 5px #ff0000; }
     33% { border-color: #00ff00; text-shadow: 0 0 5px #00ff00; }
@@ -129,7 +143,7 @@ footer {
     100% { border-color: #ff00ff; text-shadow: 0 0 5px #ff00ff; }
 }
 
-/* Fade-in Animation for Hero Section */
+/* Fade-in Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -139,4 +153,16 @@ footer {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* Anime Jedag-Jedug Animation */
+@keyframes animeJedagJedug {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Applying Anime Jedag-Jedug Effect */
+.profile-container {
+    animation: animeJedagJedug 1.5s infinite ease-in-out;
 }
